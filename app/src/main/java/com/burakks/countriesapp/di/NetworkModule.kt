@@ -35,7 +35,7 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideNetworkHeroMapper(): CountryDtoMapper = CountryDtoMapper()
+    fun provideNetworkCountryMapper(): CountryDtoMapper = CountryDtoMapper()
 
     @Provides
     @Singleton

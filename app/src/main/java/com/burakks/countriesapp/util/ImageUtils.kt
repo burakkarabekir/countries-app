@@ -12,7 +12,7 @@ import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
-const val DEFAULT_HERO_IMAGE = android.R.drawable.ic_menu_report_image
+const val DEFAULT_COUNTRY_IMAGE = android.R.drawable.ic_menu_report_image
 
 @ExperimentalCoroutinesApi
 @Composable

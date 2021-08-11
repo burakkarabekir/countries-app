@@ -22,14 +22,14 @@ fun execute(
         emit(DataState.loading())
 
         if (isNetworkAvailable) {
-            val heroes = fetchHeroes()
-            countryDao.insertCountries(entityMapper.toEntityList(heroes))
+            val countries = fetchCountries()
+            countryDao.insertCountries(entityMapper.toEntityList(countries))
         }
 
         // query the cache
         val cacheResult = countryDao.getAllCountries()
 
-        // emit List<Hero> from cache
+        // emit List<Country> from cache
         val list = entityMapper.fromEntityList(cacheResult)
 
         emit(DataState.success(list))
@@ -39,7 +39,7 @@ fun execute(
 }
 
 // WARNING: This will throw exception if there is no network connection
-private suspend fun fetchHeroes(
+private suspend fun fetchCountries(
 ): List<Country> {
     return dtoMapper.toDomainList(
         countryService.fetchCountries()

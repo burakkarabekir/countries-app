@@ -8,10 +8,11 @@ import com.burakks.countriesapp.domain.usecases.country_list.FetchCountriesUseCa
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ViewModelComponent
 import dagger.hilt.android.scopes.ViewModelScoped
 
 @Module
-@InstallIn(ViewModelScoped::class)
+@InstallIn(ViewModelComponent::class)
 object UseCaseModule {
 
     @ViewModelScoped
