@@ -1,4 +1,4 @@
-package com.burakks.countriesapp
+package com.burakks.countriesapp.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
